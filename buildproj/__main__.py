@@ -39,6 +39,11 @@ def _main_entry() -> None:
 
     parser.add_argument("--module-name", type=str, help="Name of the module")
 
+    if len(sys.argv) == 1:
+        parser.print_help(sys.stderr)
+        sys.exit(1)
+        return
+
     args = parser.parse_args(sys.argv[1:])
 
     build_task(args)

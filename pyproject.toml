@@ -1,7 +1,7 @@
 [project]
 name = "buildproj"
 version = "0.1.0"
-description = "Add your description here"
+description = "Build Tool for C/C++ Pybind11 Projects"
 readme = "README.md"
 requires-python = ">=3.13"
 dependencies = ["tqdm>=4.67.1"]
