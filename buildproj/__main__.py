@@ -10,7 +10,8 @@ import sys
 
 from buildproj import build_task
 
-if __name__ == "__main__":
+
+def _main_entry() -> None:
     parser = argparse.ArgumentParser(
         description="Build Tool with MSVC or MSYS2",
     )
@@ -41,3 +42,7 @@ if __name__ == "__main__":
     args = parser.parse_args(sys.argv[1:])
 
     build_task(args)
+
+
+if __name__ == "__main__":
+    _main_entry()
