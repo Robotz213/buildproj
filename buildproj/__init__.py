@@ -74,7 +74,11 @@ def build_makelist(
         OSError: Caso ocorra erro ao escrever o arquivo CMakeLists.txt.
 
     """
-    py_path = python_executable or str(Path(sys.executable).resolve().as_posix())
+    if not python_executable:
+        python_executable = str(Path(sys.executable).resolve().as_posix())
+
+    py_path = str(Path(python_executable).resolve().as_posix())
+
     # Modelo do conteúdo do CMakeLists.txt
     cmake_content = f"""cmake_minimum_required(VERSION 3.15)
 project({module_name} LANGUAGES CXX)
