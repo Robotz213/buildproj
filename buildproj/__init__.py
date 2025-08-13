@@ -51,7 +51,7 @@ def build_task(args: argparse.Namespace) -> None:
     if args.build_method not in callable_builders:
         raise BuildProjArgumentError(message="Escolha --msvc ou --msys2")
 
-    callable_builders[args.build_method](target=args.module_name)
+    callable_builders[args.build_method](args.module_name)
 
 
 def build_makelist(
