@@ -41,6 +41,9 @@ def build_task(args: argparse.Namespace) -> None:
             build seja especificado (--msvc ou --msys2).
 
     """
+    if Path("build").exists():
+        Path("build").rmdir()
+
     if not Path("CMakeLists.txt").exists():
         build_makelist(
             module_name=args.module_name,
