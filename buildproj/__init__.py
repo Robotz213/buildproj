@@ -6,6 +6,7 @@ a tarefa de build apropriada.
 """
 
 import argparse
+import shutil
 import sys
 from pathlib import Path
 
@@ -42,7 +43,7 @@ def build_task(args: argparse.Namespace) -> None:
 
     """
     if Path("build").exists():
-        Path("build").rmdir()
+        shutil.rmtree("build")
 
     if not Path("CMakeLists.txt").exists():
         build_makelist(
