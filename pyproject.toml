@@ -1,6 +1,6 @@
 [project]
 name = "buildproj"
-version = "0.1.1.a"
+version = "0.1.1.a1"
 description = "Build Tool for C/C++ Pybind11 Projects"
 readme = "README.md"
 requires-python = ">=3.13"
